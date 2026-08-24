@@ -57,7 +57,7 @@ class CreateCameraInfo(IO.ComfyNode):
                                tooltip="Digital zoom (focal-length multiplier). >1 zooms in without moving the camera."),
                 IO.Combo.Input("camera_type", options=["perspective", "orthographic"],
                                tooltip="Projection used by Render Splat: perspective (foreshortening) or orthographic (parallel)."),
-                IO.CameraInfoState.Input("camera_info_state"),
+                IO.CameraInfoState.Input("camera_info_state", optional=True),
             ],
             outputs=[IO.Load3DCamera.Output(display_name="camera_info")],
         )
